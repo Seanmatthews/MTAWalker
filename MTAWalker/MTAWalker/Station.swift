@@ -13,24 +13,30 @@ import CoreLocation
 // view, and then again to the route map view.
 class Station : NSObject, Comparable {
     
-    var coordinate: CLLocationCoordinate2D!
-    var routesHere: [String]!
+    var coordinate: CLLocation!
+    var routesHere = [String]()
     
     func milesFromStation() -> Double {
+        if let loc = LocationService.sharedInstance.currentLocation {
+            let dist = loc.distanceFromLocation(coordinate)
+            return dist / 1609.344
+        }
         return 0.0
     }
     
 }
 
+
 func ==(lhs: Station, rhs: Station) -> Bool {
-    if let location = LocationService.sharedInstance.currentLocation {
-        let leftStationLocation = CLLocation(latitude: lhs.coordinate.latitude,
-            longitude: lhs.coordinate.longitude)
-        let lhsDist = location.distanceFromLocation(leftStationLocation)
-    }
-    return true
+    let location = LocationService.sharedInstance.currentLocation!
+    let lhsDist = location.distanceFromLocation(lhs.coordinate)
+    let rhsDist = location.distanceFromLocation(rhs.coordinate)
+    return lhsDist == rhsDist
 }
 
 func < (lhs: Station, rhs: Station) -> Bool {
-    return true
+    let location = LocationService.sharedInstance.currentLocation!
+    let lhsDist = location.distanceFromLocation(lhs.coordinate)
+    let rhsDist = location.distanceFromLocation(rhs.coordinate)
+    return lhsDist < rhsDist
 }

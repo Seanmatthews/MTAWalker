@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="riz-YI-iaG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
     </dependencies>
@@ -221,7 +221,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AVB-RG-ONc">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVB-RG-ONc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
                                     <outlet property="delegate" destination="mdY-4m-8YP" id="jlb-0f-A6X"/>
@@ -239,6 +239,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AVB-RG-ONc" secondAttribute="bottom" id="90j-ds-9bS"/>
+                            <constraint firstItem="AVB-RG-ONc" firstAttribute="leading" secondItem="AK4-zK-j5u" secondAttribute="leading" id="KrA-nE-c02"/>
+                            <constraint firstItem="AVB-RG-ONc" firstAttribute="top" secondItem="AK4-zK-j5u" secondAttribute="top" id="jLM-W7-MpS"/>
+                            <constraint firstAttribute="trailing" secondItem="AVB-RG-ONc" secondAttribute="trailing" id="oTx-AZ-T5Y"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="AVB-RG-ONc" id="6Nf-vS-Ud8"/>

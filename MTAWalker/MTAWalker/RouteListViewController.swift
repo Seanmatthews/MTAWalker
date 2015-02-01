@@ -30,18 +30,18 @@ class RouteListViewController : UIViewController, UITableViewDataSource, UITable
         
         // TEST
 //        stations = [Station]()
-        var s = Station()
-        s.routesHere = ["A", "C", "E"]
-        stations.append(s)
-        var s2 = Station()
-        s2.routesHere = ["1"]
-        stations.append(s2)
-        var s3 = Station()
-        s3.routesHere = ["E", "M"]
-        stations.append(s3)
-        var s4 = Station()
-        s4.routesHere = ["N", "Q", "R"]
-        stations.append(s4)
+//        var s = Station()
+//        s.routesHere = ["A", "C", "E"]
+//        stations.append(s)
+//        var s2 = Station()
+//        s2.routesHere = ["1"]
+//        stations.append(s2)
+//        var s3 = Station()
+//        s3.routesHere = ["E", "M"]
+//        stations.append(s3)
+//        var s4 = Station()
+//        s4.routesHere = ["N", "Q", "R"]
+//        stations.append(s4)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -50,9 +50,7 @@ class RouteListViewController : UIViewController, UITableViewDataSource, UITable
     
     @IBAction func unwindToRouteListView(segue: UIStoryboardSegue) {}
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+    override func prefersStatusBarHidden() -> Bool { return true }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "directionsMapSegue" {
@@ -89,7 +87,7 @@ class RouteListViewController : UIViewController, UITableViewDataSource, UITable
             }
             
             // Set labels
-            (cell.viewWithTag(20) as UILabel).text = station.milesFromStation().description + " miles"
+            (cell.viewWithTag(20) as UILabel).text = NSString(format: "%.02f miles", station.milesFromStation())
             (cell.viewWithTag(30) as UILabel).text = "That's about two city avenues (the long ones)!"
             
             return cell

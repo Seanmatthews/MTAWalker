@@ -30,7 +30,12 @@ class LocationService : NSObject, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-        println("location service started")
+        NSLog("location service started")
+    }
+    
+    func stopService() {
+        locationManager.stopUpdatingLocation()
+        NSLog("location service stopped")
     }
     
     func isValidCoord(coord: CLLocationCoordinate2D) -> Bool {
@@ -48,7 +53,7 @@ class LocationService : NSObject, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         var locationArray = locations as NSArray
-        currentLocation = locationArray.lastObject as CLLocation
+        currentLocation = locationArray.lastObject as? CLLocation
         currentCoord = currentLocation!.coordinate
         
         if let coord: CLLocationCoordinate2D = currentCoord {

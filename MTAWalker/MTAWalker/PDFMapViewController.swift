@@ -37,4 +37,6 @@ class PDFMapViewController : UIViewController {
         webView.scrollView.zoomScale = 3.0
     }
 
+    override func prefersStatusBarHidden() -> Bool { return true }
+    
 }

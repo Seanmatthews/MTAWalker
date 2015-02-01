@@ -28,19 +28,21 @@ class ViewController: UIViewController {
         "N": UIColor(rgba: "#FCCC0A"), "Q": UIColor(rgba: "#FCCC0A"), "R": UIColor(rgba: "#FCCC0A"),
         "S": UIColor(rgba: "#808183")
     ]
-    private var locationMap = [String: [SwiftCoordinate]]()
-    var screenBounds: CGRect!
+    private var locationMap = [String: [Station]]()
+    private var orderedStations: [Station] = [Station]()
+    private var screenBounds: CGRect!
+    private var closest: [Station] = [Station]()
+    private var currentLocation: CLLocation!
+    private var duplicateCheckMap = [String: Bool]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blackColor()
         screenBounds = UIScreen.mainScreen().bounds
         
-        
         var buttonLayout = determineButtonLayout()
         var buttonSize = determineButtonSize(buttonLayout)
         var buttons = createButtons(buttonSize, layout: buttonLayout)
-        
         
         if buttonSize * Double(buttonLayout.0) < Double(screenBounds.height) {
             // We have unused vertical space-- add a title
@@ -64,16 +66,20 @@ class ViewController: UIViewController {
                 b.frame = frame
             }
         }
-        
-//        println("\(screenBounds)")
-//        println("\(buttonLayout)")
-//        println("\(buttonSize)")
 
         for b in buttons {
             self.view.addSubview(b)
         }
         
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            self.loadLocationData()
+//        })
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        closest = [Station]()
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,6 +88,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindToMainView (segue : UIStoryboardSegue) {}
+    
+    override func prefersStatusBarHidden() -> Bool { return true }
     
     func determineButtonSize(layout: (Int, Int)) -> Double {
         // Fit the buttons (determine button size)
@@ -150,33 +158,81 @@ class ViewController: UIViewController {
         return buttons
     }
     
+    // The location data for every station is simultaneously being loaded
+    // into an ordered list of stations, as well as a map of all locations
+    // for each route.    
     func loadLocationData() {
         let locationData = NSBundle.mainBundle().pathForResource("StationEntrances", ofType: "csv")!
         let locationStringData = String(contentsOfFile: locationData, encoding: NSUTF8StringEncoding, error: nil)!
-        var lines = split(locationStringData, {$0 == "\n"}, maxSplit: Int.max, allowEmptySlices: false)
+        
+        
+//        let news = locationStringData.stringByReplacingOccurrencesOfString("\n", withString: ":")
+//        println("\(news)")
+//        var lines = split(locationStringData, {$0 == "\n"}, maxSplit: Int.max, allowEmptySlices: false)
+        var lines = locationStringData.componentsSeparatedByString("\n")
         lines.removeAtIndex(0) // First line is column headers
-
+        
         // Could probbaly do this with a map, but would be less readable
         for l in lines {
+            if l == "" {
+                continue
+            }
             let items = split(l, {$0 == ","}, maxSplit: Int.max, allowEmptySlices: true)
-            let coord = SwiftCoordinate(latitude: (items[3] as NSString).doubleValue,
-                longitude: (items[4] as NSString).doubleValue)
+            let coord = CLLocation(latitude: (items[3] as NSString).doubleValue, longitude: (items[4] as NSString).doubleValue)
+            var s = Station()
+            
+            // Don't allow duplicates
+            let keyString = String(items[3] + items[4])
+            if let duplicate = duplicateCheckMap[keyString] {
+                continue
+            }
+            else {
+                duplicateCheckMap.updateValue(true, forKey: keyString)
+            }
+
+            s.coordinate = coord
+
             for i in items[5...15] { // the next 11 items are routes
                 if i == "" {
                     break
                 }
-                if let mapVal: AnyObject = locationMap[i] {
+                var r = i.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).uppercaseString
+                
+                // These are the recorded names of the Franklin Shuttle,
+                // Rockaway Shuttle, and Grand Central Shuttle, respectively.
+                if r == "FS" || r == "H" || r == "GS" {
+                    r = "S"
+                }
+    
+                if let mapVal: AnyObject = locationMap[r] {
                     
                 }
                 else {
-                    locationMap.updateValue([SwiftCoordinate](), forKey: i)
+                    locationMap.updateValue([Station](), forKey: r)
                 }
-                locationMap[i]!.append(coord)
+                
+                // This looks weird, but it's adding routes to one station,
+                // and mapping that station to several routes
+                locationMap[r]!.append(s)
+                s.routesHere.append(r)
             }
+            orderedStations.append(s)
         }
+        
+        // Sort stations
+//        orderedStations.sort{ return $0 < $1 }
+        NSLog("Done loading data")
     }
     
     func pressedRouteButton(sender: UIButton) {
+        LocationService.sharedInstance.stopService()
+        var routeStations = locationMap[sender.currentTitle!]!
+        routeStations.sort({ $0 < $1 })
+        closest.extend(routeStations[0...3])
+        for c in closest {
+            println(c.coordinate)
+        }
+        LocationService.sharedInstance.startService()
         self.performSegueWithIdentifier("stationListSegue", sender: self)
     }
     
@@ -185,13 +241,22 @@ class ViewController: UIViewController {
     }
     
     func pressedClosestButton(sender: UIButton) {
+        LocationService.sharedInstance.stopService()
+        orderedStations.sort{ return $0 < $1 }
+        closest.extend(orderedStations[0...3])
+        LocationService.sharedInstance.startService()
         self.performSegueWithIdentifier("stationListSegue", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "stationListSegue" {
-            
+            (segue.destinationViewController as RouteListViewController).stations = closest
         }
     }
+}
+
+func ==(lhs: CLLocation, rhs: CLLocation) -> Bool {
+    return lhs.coordinate.latitude == rhs.coordinate.latitude &&
+        lhs.coordinate.longitude == rhs.coordinate.longitude
 }
 
