@@ -14,7 +14,9 @@ import AudioToolbox
 class AlertService {
     
     private var timer: dispatch_source_t!
+    private var rightWay = true
     
+
     // Singleton
     class var sharedInstance : AlertService {
         struct Static {
@@ -23,15 +25,25 @@ class AlertService {
         return Static.instance
     }
     
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
     func wrongWayAlert() {
-        stopRightWayPulse()
+        for i in 0...4 {
+            delay (Double(i)*0.4) {
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            }
+        }
     }
     
     func rightWayPulse() {
-        timer = createDispatchTimer(5*NSEC_PER_SEC, leeway: NSEC_PER_SEC,
-            queue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block: {
-                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        })
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
     
     private func stopRightWayPulse() {

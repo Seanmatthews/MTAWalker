@@ -236,15 +236,17 @@ class ViewController: UIViewController {
     }
     
     func pressedMapButton(sender: UIButton) {
-        self.performSegueWithIdentifier("mapViewSegue", sender: self)
+        AlertService.sharedInstance.rightWayPulse()
+//        self.performSegueWithIdentifier("mapViewSegue", sender: self)
     }
     
     func pressedClosestButton(sender: UIButton) {
-        LocationService.sharedInstance.stopService()
-        orderedStations.sort{ return $0 < $1 }
-        closest.extend(orderedStations[0...3])
-        LocationService.sharedInstance.startService()
-        self.performSegueWithIdentifier("stationListSegue", sender: self)
+        AlertService.sharedInstance.wrongWayAlert()
+//        LocationService.sharedInstance.stopService()
+//        orderedStations.sort{ return $0 < $1 }
+//        closest.extend(orderedStations[0...3])
+//        LocationService.sharedInstance.startService()
+//        self.performSegueWithIdentifier("stationListSegue", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

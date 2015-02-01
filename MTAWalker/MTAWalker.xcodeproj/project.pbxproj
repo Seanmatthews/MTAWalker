@@ -58,6 +58,7 @@
 		14D575541A7EA1C800EE4774 /* MTA_NYC_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575531A7EA1C700EE4774 /* MTA_NYC_logo.png */; };
 		14D575561A7EA3AE00EE4774 /* MTA_NYC_logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575551A7EA3AE00EE4774 /* MTA_NYC_logo2.png */; };
 		14D575581A7EA88000EE4774 /* MTA_NYC_logo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575571A7EA88000EE4774 /* MTA_NYC_logo3.png */; };
+		14D5755B1A7ECFE100EE4774 /* AudioCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D5755A1A7ECFE100EE4774 /* AudioCompletion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		14D575531A7EA1C700EE4774 /* MTA_NYC_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MTA_NYC_logo.png; path = ../../resources/MTA_NYC_logo.png; sourceTree = "<group>"; };
 		14D575551A7EA3AE00EE4774 /* MTA_NYC_logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MTA_NYC_logo2.png; path = ../../resources/MTA_NYC_logo2.png; sourceTree = "<group>"; };
 		14D575571A7EA88000EE4774 /* MTA_NYC_logo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MTA_NYC_logo3.png; path = ../../resources/MTA_NYC_logo3.png; sourceTree = "<group>"; };
+		14D575591A7ECFE100EE4774 /* MTAWalker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTAWalker-Bridging-Header.h"; sourceTree = "<group>"; };
+		14D5755A1A7ECFE100EE4774 /* AudioCompletion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCompletion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +237,8 @@
 			children = (
 				14B2B2EB1A7CBDA400D73912 /* LocationService.swift */,
 				14B2B2F01A7D533800D73912 /* AlertService.swift */,
+				14D5755A1A7ECFE100EE4774 /* AudioCompletion.m */,
+				14D575591A7ECFE100EE4774 /* MTAWalker-Bridging-Header.h */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 				14B2B2AA1A7C258500D73912 /* ViewController.swift in Sources */,
 				14B2B2EC1A7CBDA400D73912 /* LocationService.swift in Sources */,
 				14B2B2A81A7C258500D73912 /* AppDelegate.swift in Sources */,
+				14D5755B1A7ECFE100EE4774 /* AudioCompletion.m in Sources */,
 				14B2B2D41A7C4D6300D73912 /* UIColorExtension.swift in Sources */,
 				14B2B2F91A7D731E00D73912 /* DirectionsMapViewController.swift in Sources */,
 				14B2B2D81A7C85D700D73912 /* PDFMapViewController.swift in Sources */,
@@ -569,10 +575,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MTAWalker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MTAWalker/MTAWalker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -580,10 +589,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MTAWalker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MTAWalker/MTAWalker-Bridging-Header.h";
 			};
 			name = Release;
 		};

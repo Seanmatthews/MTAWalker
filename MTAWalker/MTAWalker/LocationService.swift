@@ -14,6 +14,10 @@ class LocationService : NSObject, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var currentCoord: CLLocationCoordinate2D? = nil
     var currentLocation: CLLocation? = nil
+    var lastSignificantLocation: CLLocation?
+    var trackingUser = false
+    var destination: CLLocation!
+//    private let significantChangeDistance
     
     // Singleton
     class var sharedInstance : LocationService {
@@ -27,6 +31,7 @@ class LocationService : NSObject, CLLocationManagerDelegate {
         // TODO add values to plist
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 10.0
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
@@ -49,6 +54,8 @@ class LocationService : NSObject, CLLocationManagerDelegate {
     }
     
     
+    
+    
     // CLLocationManagerDelegate functions
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -60,7 +67,24 @@ class LocationService : NSObject, CLLocationManagerDelegate {
             println(coord.latitude)
             println(coord.longitude)
             if isValidCoord(coord) {
-                
+                if trackingUser {
+                    if let last = lastSignificantLocation {
+                        // Last significant location changes once the walker covers
+                        // a distance 
+                        if currentLocation!.distanceFromLocation(destination) >
+                            currentLocation!.distanceFromLocation(last) {
+                                // Buzz crazy
+                        }
+                        else {
+                            // One pulse
+                            AlertService.sharedInstance
+                        }
+                    }
+                    else {
+                        // Create a baseline
+                        lastSignificantLocation = currentLocation
+                    }
+                }
             }
         }
     }
