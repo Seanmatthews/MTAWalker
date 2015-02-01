@@ -189,7 +189,7 @@ class ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.description == "stationListSegue" {
+        if segue.identifier == "stationListSegue" {
             
         }
     }
