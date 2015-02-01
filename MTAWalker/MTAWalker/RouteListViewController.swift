@@ -25,28 +25,6 @@ class RouteListViewController : UIViewController, UITableViewDataSource, UITable
         "7": UIImage(named: "7.png")
     ]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // TEST
-//        stations = [Station]()
-//        var s = Station()
-//        s.routesHere = ["A", "C", "E"]
-//        stations.append(s)
-//        var s2 = Station()
-//        s2.routesHere = ["1"]
-//        stations.append(s2)
-//        var s3 = Station()
-//        s3.routesHere = ["E", "M"]
-//        stations.append(s3)
-//        var s4 = Station()
-//        s4.routesHere = ["N", "Q", "R"]
-//        stations.append(s4)
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
     
     @IBAction func unwindToRouteListView(segue: UIStoryboardSegue) {}
     

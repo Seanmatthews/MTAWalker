@@ -53,6 +53,11 @@
 		14B2B3311A7D98FF00D73912 /* z.png in Resources */ = {isa = PBXBuildFile; fileRef = 14B2B3191A7D98FF00D73912 /* z.png */; };
 		14B2B3331A7D9ECB00D73912 /* walking-man-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 14B2B3321A7D9ECB00D73912 /* walking-man-black.png */; };
 		14B2B3351A7DA86E00D73912 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 14B2B3341A7DA86E00D73912 /* bg.png */; };
+		14D575501A7E9FCF00EE4774 /* walking-man-white-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D5754F1A7E9FCF00EE4774 /* walking-man-white-small.png */; };
+		14D575521A7EA05200EE4774 /* walking-man-white-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575511A7EA05200EE4774 /* walking-man-white-large.png */; };
+		14D575541A7EA1C800EE4774 /* MTA_NYC_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575531A7EA1C700EE4774 /* MTA_NYC_logo.png */; };
+		14D575561A7EA3AE00EE4774 /* MTA_NYC_logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575551A7EA3AE00EE4774 /* MTA_NYC_logo2.png */; };
+		14D575581A7EA88000EE4774 /* MTA_NYC_logo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575571A7EA88000EE4774 /* MTA_NYC_logo3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +121,11 @@
 		14B2B3191A7D98FF00D73912 /* z.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = z.png; path = ../../resources/z.png; sourceTree = "<group>"; };
 		14B2B3321A7D9ECB00D73912 /* walking-man-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walking-man-black.png"; path = "../../resources/walking-man-black.png"; sourceTree = "<group>"; };
 		14B2B3341A7DA86E00D73912 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../resources/bg.png; sourceTree = "<group>"; };
+		14D5754F1A7E9FCF00EE4774 /* walking-man-white-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walking-man-white-small.png"; path = "../../resources/walking-man-white-small.png"; sourceTree = "<group>"; };
+		14D575511A7EA05200EE4774 /* walking-man-white-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walking-man-white-large.png"; path = "../../resources/walking-man-white-large.png"; sourceTree = "<group>"; };
+		14D575531A7EA1C700EE4774 /* MTA_NYC_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MTA_NYC_logo.png; path = ../../resources/MTA_NYC_logo.png; sourceTree = "<group>"; };
+		14D575551A7EA3AE00EE4774 /* MTA_NYC_logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MTA_NYC_logo2.png; path = ../../resources/MTA_NYC_logo2.png; sourceTree = "<group>"; };
+		14D575571A7EA88000EE4774 /* MTA_NYC_logo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MTA_NYC_logo3.png; path = ../../resources/MTA_NYC_logo3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +188,11 @@
 		14B2B2A51A7C258500D73912 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14D575571A7EA88000EE4774 /* MTA_NYC_logo3.png */,
+				14D575551A7EA3AE00EE4774 /* MTA_NYC_logo2.png */,
+				14D575531A7EA1C700EE4774 /* MTA_NYC_logo.png */,
+				14D575511A7EA05200EE4774 /* walking-man-white-large.png */,
+				14D5754F1A7E9FCF00EE4774 /* walking-man-white-small.png */,
 				14B2B3321A7D9ECB00D73912 /* walking-man-black.png */,
 				14B2B3011A7D98CC00D73912 /* route symbols */,
 				14B2B2F21A7D71C000D73912 /* colors.csv */,
@@ -369,13 +384,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B2B3201A7D98FF00D73912 /* 6d.png in Resources */,
+				14D575581A7EA88000EE4774 /* MTA_NYC_logo3.png in Resources */,
+				14D575561A7EA3AE00EE4774 /* MTA_NYC_logo2.png in Resources */,
 				14B2B31E1A7D98FF00D73912 /* 5.png in Resources */,
+				14D575521A7EA05200EE4774 /* walking-man-white-large.png in Resources */,
 				14B2B3351A7DA86E00D73912 /* bg.png in Resources */,
 				14B2B2AD1A7C258500D73912 /* Main.storyboard in Resources */,
 				14B2B3251A7D98FF00D73912 /* c.png in Resources */,
 				14B2B3211A7D98FF00D73912 /* 7.png in Resources */,
 				14B2B32A1A7D98FF00D73912 /* j.png in Resources */,
 				14B2B3271A7D98FF00D73912 /* e.png in Resources */,
+				14D575501A7E9FCF00EE4774 /* walking-man-white-small.png in Resources */,
 				14B2B3301A7D98FF00D73912 /* s.png in Resources */,
 				14B2B2F61A7D71C000D73912 /* StationEntrances.csv in Resources */,
 				14B2B31B1A7D98FF00D73912 /* 2.png in Resources */,
@@ -387,6 +406,7 @@
 				14B2B31F1A7D98FF00D73912 /* 6.png in Resources */,
 				14B2B32B1A7D98FF00D73912 /* l.png in Resources */,
 				14B2B32E1A7D98FF00D73912 /* q.png in Resources */,
+				14D575541A7EA1C800EE4774 /* MTA_NYC_logo.png in Resources */,
 				14B2B3291A7D98FF00D73912 /* g.png in Resources */,
 				14B2B3311A7D98FF00D73912 /* z.png in Resources */,
 				14B2B3231A7D98FF00D73912 /* a.png in Resources */,

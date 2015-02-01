@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,7 +16,50 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="walking-man-white-large.png" translatesAutoresizingMaskIntoConstraints="NO" id="mCm-lt-Gan">
+                                <rect key="frame" x="269" y="0.0" width="63" height="79"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mCm-lt-Gan" secondAttribute="height" multiplier="63:79" id="6FF-k3-uoe"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="MTA_NYC_logo3.png" translatesAutoresizingMaskIntoConstraints="NO" id="W6s-7d-QcY">
+                                <rect key="frame" x="73" y="0.0" width="188" height="79"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W6s-7d-QcY" secondAttribute="height" multiplier="188:79" id="ot6-9A-Neb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOx-oy-ncl">
+                                <rect key="frame" x="0.0" y="0.0" width="65" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Walker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Nf-be-VOk">
+                                <rect key="frame" x="340" y="0.0" width="260" height="79"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Nf-be-VOk" secondAttribute="height" multiplier="260:79" id="biT-ET-qTL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="71"/>
+                                <color key="textColor" red="0.99580439814814814" green="0.99580439814814814" blue="0.99580439814814814" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mCm-lt-Gan" firstAttribute="leading" secondItem="W6s-7d-QcY" secondAttribute="trailing" constant="8" id="F8O-Rb-NZa"/>
+                            <constraint firstAttribute="trailing" secondItem="1Nf-be-VOk" secondAttribute="trailing" id="IMp-yA-SU7"/>
+                            <constraint firstItem="vOx-oy-ncl" firstAttribute="height" secondItem="1Nf-be-VOk" secondAttribute="height" id="IyT-en-O1w"/>
+                            <constraint firstItem="mCm-lt-Gan" firstAttribute="height" secondItem="vOx-oy-ncl" secondAttribute="height" id="LVk-08-WBx"/>
+                            <constraint firstItem="W6s-7d-QcY" firstAttribute="leading" secondItem="vOx-oy-ncl" secondAttribute="trailing" constant="8" id="Tk0-f8-18I"/>
+                            <constraint firstItem="1Nf-be-VOk" firstAttribute="leading" secondItem="mCm-lt-Gan" secondAttribute="trailing" constant="8" id="VWz-kX-W6m"/>
+                            <constraint firstItem="vOx-oy-ncl" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="W3J-ag-aMZ"/>
+                            <constraint firstItem="vOx-oy-ncl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lDG-um-5kf"/>
+                            <constraint firstItem="W6s-7d-QcY" firstAttribute="height" secondItem="vOx-oy-ncl" secondAttribute="height" id="lFO-bS-xJZ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="t4r-YX-6bY" kind="presentation" identifier="mapViewSegue" id="XMI-nE-dQr"/>
@@ -228,13 +272,13 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P26-H2-GV1">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="END">
+                                <state key="normal" title="END DIRECTIONS">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1Cb-Ac-hzR" kind="unwind" unwindAction="unwindToRouteListView:" id="Hf8-Sw-am4"/>
+                                    <segue destination="1Cb-Ac-hzR" kind="unwind" unwindAction="unwindToMainView:" id="LqT-jv-uDG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -257,6 +301,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MTA_NYC_logo3.png" width="435" height="318"/>
         <image name="walking-man-black.png" width="744" height="1052"/>
+        <image name="walking-man-white-large.png" width="200" height="283"/>
     </resources>
 </document>
