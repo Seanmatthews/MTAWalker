@@ -74,10 +74,11 @@ class LocationService : NSObject, CLLocationManagerDelegate {
                         if currentLocation!.distanceFromLocation(destination) >
                             currentLocation!.distanceFromLocation(last) {
                                 // Buzz crazy
+                                AlertService.sharedInstance.wrongWayAlert()
                         }
                         else {
                             // One pulse
-                            AlertService.sharedInstance
+                            AlertService.sharedInstance.rightWayPulse()
                         }
                         
                     }

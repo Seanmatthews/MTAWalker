@@ -29,7 +29,6 @@ class DirectionsMapViewController : UIViewController, MKMapViewDelegate {
     // the route will be set
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        LocationService.sharedInstance.trackingUser = true
         directionsReq = MKDirectionsRequest()
         source = MKMapItem.mapItemForCurrentLocation()
         destination = MKMapItem(placemark:
@@ -46,6 +45,7 @@ class DirectionsMapViewController : UIViewController, MKMapViewDelegate {
                 self.mapView.addOverlay(route.polyline, level:.AboveRoads)
 //            }
         }
+        LocationService.sharedInstance.trackingUser = true
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
