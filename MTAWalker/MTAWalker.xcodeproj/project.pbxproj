@@ -59,6 +59,10 @@
 		14D575561A7EA3AE00EE4774 /* MTA_NYC_logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575551A7EA3AE00EE4774 /* MTA_NYC_logo2.png */; };
 		14D575581A7EA88000EE4774 /* MTA_NYC_logo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575571A7EA88000EE4774 /* MTA_NYC_logo3.png */; };
 		14D5755B1A7ECFE100EE4774 /* AudioCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D5755A1A7ECFE100EE4774 /* AudioCompletion.m */; };
+		14D5755E1A80391500EE4774 /* map-thumb-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D5755C1A80391500EE4774 /* map-thumb-color.png */; };
+		14D5755F1A80391500EE4774 /* map-thumb-grayscale.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D5755D1A80391500EE4774 /* map-thumb-grayscale.png */; };
+		14D575621A803ACB00EE4774 /* target-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575601A803ACB00EE4774 /* target-black.png */; };
+		14D575631A803ACB00EE4774 /* target-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575611A803ACB00EE4774 /* target-gray.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +133,10 @@
 		14D575571A7EA88000EE4774 /* MTA_NYC_logo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MTA_NYC_logo3.png; path = ../../resources/MTA_NYC_logo3.png; sourceTree = "<group>"; };
 		14D575591A7ECFE100EE4774 /* MTAWalker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTAWalker-Bridging-Header.h"; sourceTree = "<group>"; };
 		14D5755A1A7ECFE100EE4774 /* AudioCompletion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCompletion.m; sourceTree = "<group>"; };
+		14D5755C1A80391500EE4774 /* map-thumb-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-thumb-color.png"; path = "../../resources/map-thumb-color.png"; sourceTree = "<group>"; };
+		14D5755D1A80391500EE4774 /* map-thumb-grayscale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-thumb-grayscale.png"; path = "../../resources/map-thumb-grayscale.png"; sourceTree = "<group>"; };
+		14D575601A803ACB00EE4774 /* target-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "target-black.png"; path = "../../resources/target-black.png"; sourceTree = "<group>"; };
+		14D575611A803ACB00EE4774 /* target-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "target-gray.png"; path = "../../resources/target-gray.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +199,10 @@
 		14B2B2A51A7C258500D73912 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14D575601A803ACB00EE4774 /* target-black.png */,
+				14D575611A803ACB00EE4774 /* target-gray.png */,
+				14D5755C1A80391500EE4774 /* map-thumb-color.png */,
+				14D5755D1A80391500EE4774 /* map-thumb-grayscale.png */,
 				14D575571A7EA88000EE4774 /* MTA_NYC_logo3.png */,
 				14D575551A7EA3AE00EE4774 /* MTA_NYC_logo2.png */,
 				14D575531A7EA1C700EE4774 /* MTA_NYC_logo.png */,
@@ -397,6 +409,7 @@
 				14B2B2AD1A7C258500D73912 /* Main.storyboard in Resources */,
 				14B2B3251A7D98FF00D73912 /* c.png in Resources */,
 				14B2B3211A7D98FF00D73912 /* 7.png in Resources */,
+				14D575631A803ACB00EE4774 /* target-gray.png in Resources */,
 				14B2B32A1A7D98FF00D73912 /* j.png in Resources */,
 				14B2B3271A7D98FF00D73912 /* e.png in Resources */,
 				14D575501A7E9FCF00EE4774 /* walking-man-white-small.png in Resources */,
@@ -416,7 +429,9 @@
 				14B2B3311A7D98FF00D73912 /* z.png in Resources */,
 				14B2B3231A7D98FF00D73912 /* a.png in Resources */,
 				14B2B2B21A7C258500D73912 /* LaunchScreen.xib in Resources */,
+				14D575621A803ACB00EE4774 /* target-black.png in Resources */,
 				14B2B3221A7D98FF00D73912 /* 7d.png in Resources */,
+				14D5755E1A80391500EE4774 /* map-thumb-color.png in Resources */,
 				14B2B2F51A7D71C000D73912 /* colors.csv in Resources */,
 				14B2B2AF1A7C258500D73912 /* Images.xcassets in Resources */,
 				14B2B31D1A7D98FF00D73912 /* 4.png in Resources */,
@@ -424,6 +439,7 @@
 				14B2B3281A7D98FF00D73912 /* f.png in Resources */,
 				14B2B3261A7D98FF00D73912 /* d.png in Resources */,
 				14B2B32F1A7D98FF00D73912 /* r.png in Resources */,
+				14D5755F1A80391500EE4774 /* map-thumb-grayscale.png in Resources */,
 				14B2B3241A7D98FF00D73912 /* b.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -79,11 +79,10 @@ class LocationService : NSObject, CLLocationManagerDelegate {
                             // One pulse
                             AlertService.sharedInstance
                         }
+                        
                     }
-                    else {
-                        // Create a baseline
-                        lastSignificantLocation = currentLocation
-                    }
+                    // Create a baseline
+                    lastSignificantLocation = currentLocation
                 }
             }
         }

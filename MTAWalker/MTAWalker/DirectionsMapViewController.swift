@@ -29,6 +29,7 @@ class DirectionsMapViewController : UIViewController, MKMapViewDelegate {
     // the route will be set
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        LocationService.sharedInstance.trackingUser = true
         directionsReq = MKDirectionsRequest()
         source = MKMapItem.mapItemForCurrentLocation()
         destination = MKMapItem(placemark:
@@ -47,8 +48,8 @@ class DirectionsMapViewController : UIViewController, MKMapViewDelegate {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        LocationService.sharedInstance.trackingUser = false
     }
     
     override func prefersStatusBarHidden() -> Bool { return true }

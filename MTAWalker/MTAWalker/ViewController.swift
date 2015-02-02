@@ -134,9 +134,7 @@ class ViewController: UIViewController {
         // Map button
         var mapButtonRect = CGRectMake(CGFloat(size)*CGFloat(column), CGFloat(size)*CGFloat(row), CGFloat(size), CGFloat(size))
         var mapButton = UIButton(frame: mapButtonRect)
-        mapButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        mapButton.setTitle("MAP", forState: .Normal)
-        mapButton.backgroundColor = UIColor.whiteColor()
+        mapButton.setBackgroundImage(UIImage(named: "map-thumb-grayscale.png"), forState: .Normal)
         mapButton.layer.borderColor = UIColor.blackColor().CGColor
         mapButton.layer.borderWidth = 1.0
         mapButton.addTarget(self, action: "pressedMapButton:", forControlEvents: .TouchUpInside)
@@ -146,9 +144,7 @@ class ViewController: UIViewController {
         // Closest button
         var closestButtonRect = CGRectMake(CGFloat(size)*CGFloat(column), CGFloat(size)*CGFloat(row), CGFloat(size), CGFloat(size))
         var closestButton = UIButton(frame: closestButtonRect)
-        closestButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        closestButton.setTitle("CLOSE", forState: .Normal)
-        closestButton.backgroundColor = UIColor.whiteColor()
+        closestButton.setBackgroundImage(UIImage(named: "target-gray.png"), forState: .Normal)
         closestButton.layer.borderColor = UIColor.blackColor().CGColor
         closestButton.layer.borderWidth = 1.0
         closestButton.addTarget(self, action: "pressedClosestButton:", forControlEvents: .TouchUpInside)
@@ -163,11 +159,6 @@ class ViewController: UIViewController {
     func loadLocationData() {
         let locationData = NSBundle.mainBundle().pathForResource("StationEntrances", ofType: "csv")!
         let locationStringData = String(contentsOfFile: locationData, encoding: NSUTF8StringEncoding, error: nil)!
-        
-        
-//        let news = locationStringData.stringByReplacingOccurrencesOfString("\n", withString: ":")
-//        println("\(news)")
-//        var lines = split(locationStringData, {$0 == "\n"}, maxSplit: Int.max, allowEmptySlices: false)
         var lines = locationStringData.componentsSeparatedByString("\n")
         lines.removeAtIndex(0) // First line is column headers
         
@@ -217,9 +208,6 @@ class ViewController: UIViewController {
             }
             orderedStations.append(s)
         }
-        
-        // Sort stations
-//        orderedStations.sort{ return $0 < $1 }
         NSLog("Done loading data")
     }
     
@@ -236,17 +224,15 @@ class ViewController: UIViewController {
     }
     
     func pressedMapButton(sender: UIButton) {
-        AlertService.sharedInstance.rightWayPulse()
-//        self.performSegueWithIdentifier("mapViewSegue", sender: self)
+        self.performSegueWithIdentifier("mapViewSegue", sender: self)
     }
     
     func pressedClosestButton(sender: UIButton) {
-        AlertService.sharedInstance.wrongWayAlert()
-//        LocationService.sharedInstance.stopService()
-//        orderedStations.sort{ return $0 < $1 }
-//        closest.extend(orderedStations[0...3])
-//        LocationService.sharedInstance.startService()
-//        self.performSegueWithIdentifier("stationListSegue", sender: self)
+        LocationService.sharedInstance.stopService()
+        orderedStations.sort{ return $0 < $1 }
+        closest.extend(orderedStations[0...3])
+        LocationService.sharedInstance.startService()
+        self.performSegueWithIdentifier("stationListSegue", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
