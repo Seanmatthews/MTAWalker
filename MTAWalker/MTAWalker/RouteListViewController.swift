@@ -65,8 +65,11 @@ class RouteListViewController : UIViewController, UITableViewDataSource, UITable
             }
             
             // Set labels
-            (cell.viewWithTag(20) as UILabel).text = NSString(format: "%.02f miles", station.milesFromStation())
-            (cell.viewWithTag(30) as UILabel).text = "That's about two city avenues (the long ones)!"
+            let miles = station.milesFromStation()
+            (cell.viewWithTag(20) as UILabel).textAlignment = .Right
+            (cell.viewWithTag(30) as UILabel).textAlignment = .Right
+            (cell.viewWithTag(20) as UILabel).text = NSString(format: "%.02f miles", miles)
+            (cell.viewWithTag(30) as UILabel).text = milesInCityBlocks(miles)
             
             return cell
     }
@@ -86,6 +89,34 @@ class RouteListViewController : UIViewController, UITableViewDataSource, UITable
         didSelectRowAtIndexPath indexPath: NSIndexPath) {
             selectedStation = stations[indexPath.row]
             self.performSegueWithIdentifier("directionsMapSegue", sender: self)
+    }
+    
+    func milesInCityBlocks(distance: Double) -> String {
+        var str: String!
+        
+        let blocks = Int(distance * 20.0)
+        let avenues = blocks / 3
+        if blocks < 21 {
+            str = "About " + String(blocks) + " city blocks."
+        }
+        else {
+            str = "About " + String(avenues) + " city avenues."
+        }
+        
+        if distance < 0.101 {
+            str = str + "\nYou're practically there!"
+        }
+        else if distance < 0.501 {
+            str = str + "\nEasy peasy."
+        }
+        else if distance < 1.01 {
+            str = str + "\nA healthy afternoon walk."
+        }
+        else {
+            str = str + "\nMaybe there's a closer station?"
+        }
+        
+        return str
     }
     
 }

@@ -66,7 +66,6 @@
 		14D575651A805A7200EE4774 /* MTA_NYC_logo-black-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575641A805A7200EE4774 /* MTA_NYC_logo-black-small.png */; };
 		14D5756A1A805E8F00EE4774 /* walking-man-black-gif-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575681A805E8F00EE4774 /* walking-man-black-gif-1.png */; };
 		14D5756B1A805E8F00EE4774 /* walking-man-black-gif-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575691A805E8F00EE4774 /* walking-man-black-gif-2.png */; };
-		14D575711A80624E00EE4774 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D575701A80624E00EE4774 /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,7 +143,6 @@
 		14D575641A805A7200EE4774 /* MTA_NYC_logo-black-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MTA_NYC_logo-black-small.png"; path = "../../resources/MTA_NYC_logo-black-small.png"; sourceTree = "<group>"; };
 		14D575681A805E8F00EE4774 /* walking-man-black-gif-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walking-man-black-gif-1.png"; path = "../../resources/walking-man-black-gif-1.png"; sourceTree = "<group>"; };
 		14D575691A805E8F00EE4774 /* walking-man-black-gif-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walking-man-black-gif-2.png"; path = "../../resources/walking-man-black-gif-2.png"; sourceTree = "<group>"; };
-		14D575701A80624E00EE4774 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,7 +271,6 @@
 				14B2B2E01A7CABE700D73912 /* RouteListViewController.swift */,
 				14B2B2D71A7C85D700D73912 /* PDFMapViewController.swift */,
 				14B2B2F81A7D731E00D73912 /* DirectionsMapViewController.swift */,
-				14D575701A80624E00EE4774 /* LaunchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -473,7 +470,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14D575711A80624E00EE4774 /* LaunchViewController.swift in Sources */,
 				14B2B2D21A7C466D00D73912 /* SwiftCoordinate.swift in Sources */,
 				14B2B2AA1A7C258500D73912 /* ViewController.swift in Sources */,
 				14B2B2EC1A7CBDA400D73912 /* LocationService.swift in Sources */,

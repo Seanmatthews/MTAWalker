@@ -64,27 +64,24 @@ class LocationService : NSObject, CLLocationManagerDelegate {
         currentCoord = currentLocation!.coordinate
         
         if let coord: CLLocationCoordinate2D = currentCoord {
-            println(coord.latitude)
-            println(coord.longitude)
             if isValidCoord(coord) {
                 if trackingUser {
-                    if let last = lastSignificantLocation {
-                        // Last significant location changes once the walker covers
-                        // a distance 
-                        if currentLocation!.distanceFromLocation(destination) >
-                            last.distanceFromLocation(destination) {
-                                // Buzz crazy
-                                AlertService.sharedInstance.wrongWayAlert()
-                        }
-                        else {
-                            // One pulse
-                            AlertService.sharedInstance.rightWayPulse()
-                        }
-                        
+
+                    // Last significant location changes once the walker covers
+                    // a distance 
+                    if currentLocation!.distanceFromLocation(destination) >
+                        lastSignificantLocation!.distanceFromLocation(destination) {
+                            // Buzz crazy
+                            AlertService.sharedInstance.wrongWayAlert()
                     }
-                    // Create a baseline
-                    lastSignificantLocation = currentLocation
+                    else {
+                        // One pulse
+                        AlertService.sharedInstance.rightWayPulse()
+                    }
+                    
                 }
+                // Create a baseline
+                lastSignificantLocation = currentLocation
             }
         }
     }

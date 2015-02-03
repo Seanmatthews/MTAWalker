@@ -45,6 +45,7 @@ class DirectionsMapViewController : UIViewController, MKMapViewDelegate {
                 self.mapView.addOverlay(route.polyline, level:.AboveRoads)
 //            }
         }
+        LocationService.sharedInstance.destination = station.coordinate
         LocationService.sharedInstance.trackingUser = true
     }
     
