@@ -141,8 +141,8 @@
                                                         <constraint firstAttribute="width" constant="41" id="fXs-Rh-01P"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="30" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tl-a6-fV1">
-                                                    <rect key="frame" x="152" y="66" width="440" height="59"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="30" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9tl-a6-fV1">
+                                                    <rect key="frame" x="101" y="66" width="491" height="59"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -157,9 +157,9 @@
                                             <constraints>
                                                 <constraint firstItem="9kz-Os-Fso" firstAttribute="top" secondItem="3IH-hC-h2a" secondAttribute="top" constant="39" id="0pF-5H-BgH"/>
                                                 <constraint firstAttribute="trailing" secondItem="O8i-KQ-2fV" secondAttribute="trailing" constant="66" id="5RH-dK-idM"/>
+                                                <constraint firstItem="9tl-a6-fV1" firstAttribute="leading" secondItem="Jfh-kg-q5K" secondAttribute="trailing" constant="8" id="7GU-pD-7LF"/>
                                                 <constraint firstAttribute="trailing" secondItem="fZV-4b-imF" secondAttribute="trailing" constant="8" id="88V-0j-PRF"/>
                                                 <constraint firstItem="GlG-kb-KH2" firstAttribute="top" secondItem="3IH-hC-h2a" secondAttribute="top" constant="102" id="C3E-AG-Ljl"/>
-                                                <constraint firstItem="9tl-a6-fV1" firstAttribute="leading" secondItem="Jfh-kg-q5K" secondAttribute="trailing" constant="59" id="Cnp-Um-ZcJ"/>
                                                 <constraint firstItem="fZV-4b-imF" firstAttribute="leading" secondItem="WjL-yn-pPH" secondAttribute="trailing" constant="17" id="DWD-Sk-sZD"/>
                                                 <constraint firstItem="mNh-Vc-9Ot" firstAttribute="top" secondItem="3IH-hC-h2a" secondAttribute="top" constant="8" id="DjZ-fJ-jLA"/>
                                                 <constraint firstItem="sbx-wI-YfI" firstAttribute="top" secondItem="3IH-hC-h2a" secondAttribute="top" constant="8" id="E4D-Z1-tUA"/>
@@ -330,8 +330,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkZ-ih-pYS">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                            <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkZ-ih-pYS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="BACK">
@@ -345,7 +345,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jkZ-ih-pYS" firstAttribute="top" secondItem="SdR-I8-7jR" secondAttribute="top" id="GnN-4L-cBN"/>
+                            <constraint firstItem="jkZ-ih-pYS" firstAttribute="leading" secondItem="SdR-I8-7jR" secondAttribute="leading" id="Vnf-up-Bri"/>
                             <constraint firstAttribute="bottom" secondItem="DaJ-6H-ayH" secondAttribute="bottom" id="XkM-5O-gHw"/>
+                            <constraint firstAttribute="trailing" secondItem="jkZ-ih-pYS" secondAttribute="trailing" id="abX-4V-NJF"/>
                             <constraint firstItem="DaJ-6H-ayH" firstAttribute="top" secondItem="SdR-I8-7jR" secondAttribute="top" id="bLH-R2-oER"/>
                         </constraints>
                     </view>

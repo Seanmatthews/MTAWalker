@@ -69,16 +69,19 @@ class LocationService : NSObject, CLLocationManagerDelegate {
 
                     // Last significant location changes once the walker covers
                     // a distance 
-                    if currentLocation!.distanceFromLocation(destination) >
-                        lastSignificantLocation!.distanceFromLocation(destination) {
-                            // Buzz crazy
-                            AlertService.sharedInstance.wrongWayAlert()
+                    let currentDistance = currentLocation!.distanceFromLocation(destination)
+                    if  currentDistance > lastSignificantLocation!.distanceFromLocation(destination) {
+                        // Buzz crazy
+                        AlertService.sharedInstance.wrongWayAlert()
                     }
                     else {
                         // One pulse
                         AlertService.sharedInstance.rightWayPulse()
                     }
                     
+                    if currentDistance < 10.0 {
+                        trackingUser = false
+                    }
                 }
                 // Create a baseline
                 lastSignificantLocation = currentLocation

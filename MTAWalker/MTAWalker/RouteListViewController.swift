@@ -112,7 +112,7 @@ class RouteListViewController : UIViewController, UITableViewDataSource, UITable
             str = str + "\nEasy peasy."
         }
         else if distance < 1.01 {
-            str = str + "\nA healthy afternoon walk...."
+            str = str + "\nA healthy afternoon walk."
         }
         else {
             str = str + "\nMaybe there's a closer one?"
