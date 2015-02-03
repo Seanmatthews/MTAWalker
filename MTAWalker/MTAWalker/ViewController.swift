@@ -80,6 +80,14 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         closest = [Station]()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        if !NSUserDefaults.standardUserDefaults().boolForKey("sawInstructions") {
+            let view = self.storyboard!.instantiateViewControllerWithIdentifier("InstructionsView")! as InstructionsViewController
+            self.presentViewController(view, animated: true, completion: nil)
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "sawInstructions")
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

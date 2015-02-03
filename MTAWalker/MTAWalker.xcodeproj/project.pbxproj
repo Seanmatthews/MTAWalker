@@ -66,6 +66,7 @@
 		14D575651A805A7200EE4774 /* MTA_NYC_logo-black-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575641A805A7200EE4774 /* MTA_NYC_logo-black-small.png */; };
 		14D5756A1A805E8F00EE4774 /* walking-man-black-gif-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575681A805E8F00EE4774 /* walking-man-black-gif-1.png */; };
 		14D5756B1A805E8F00EE4774 /* walking-man-black-gif-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575691A805E8F00EE4774 /* walking-man-black-gif-2.png */; };
+		14D575731A80963F00EE4774 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D575721A80963F00EE4774 /* InstructionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		14D575641A805A7200EE4774 /* MTA_NYC_logo-black-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MTA_NYC_logo-black-small.png"; path = "../../resources/MTA_NYC_logo-black-small.png"; sourceTree = "<group>"; };
 		14D575681A805E8F00EE4774 /* walking-man-black-gif-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walking-man-black-gif-1.png"; path = "../../resources/walking-man-black-gif-1.png"; sourceTree = "<group>"; };
 		14D575691A805E8F00EE4774 /* walking-man-black-gif-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walking-man-black-gif-2.png"; path = "../../resources/walking-man-black-gif-2.png"; sourceTree = "<group>"; };
+		14D575721A80963F00EE4774 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 				14B2B2E01A7CABE700D73912 /* RouteListViewController.swift */,
 				14B2B2D71A7C85D700D73912 /* PDFMapViewController.swift */,
 				14B2B2F81A7D731E00D73912 /* DirectionsMapViewController.swift */,
+				14D575721A80963F00EE4774 /* InstructionsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				14B2B2A81A7C258500D73912 /* AppDelegate.swift in Sources */,
 				14D5755B1A7ECFE100EE4774 /* AudioCompletion.m in Sources */,
 				14B2B2D41A7C4D6300D73912 /* UIColorExtension.swift in Sources */,
+				14D575731A80963F00EE4774 /* InstructionsViewController.swift in Sources */,
 				14B2B2F91A7D731E00D73912 /* DirectionsMapViewController.swift in Sources */,
 				14B2B2D81A7C85D700D73912 /* PDFMapViewController.swift in Sources */,
 				14B2B2E11A7CABE700D73912 /* RouteListViewController.swift in Sources */,

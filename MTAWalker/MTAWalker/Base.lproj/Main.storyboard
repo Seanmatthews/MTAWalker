@@ -217,6 +217,103 @@
             </objects>
             <point key="canvasLocation" x="1247" y="319"/>
         </scene>
+        <!--Instructions View Controller-->
+        <scene sceneID="J6E-nt-33G">
+            <objects>
+                <viewController storyboardIdentifier="InstructionsView" automaticallyAdjustsScrollViewInsets="NO" id="caM-vR-dnT" customClass="InstructionsViewController" customModule="MTAWalker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bWQ-xP-n1a"/>
+                        <viewControllerLayoutGuide type="bottom" id="dgF-UJ-nAA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wgr-df-XJD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let me show you how to use the app!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TO-er-9x6">
+                                <rect key="frame" x="16" y="20" width="568" height="94"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Choose a station." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVN-Mf-xHK">
+                                <rect key="frame" x="66" y="216" width="518" height="90"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pick a line (or push the target symbol for the closest line)." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zab-Ij-eNt">
+                                <rect key="frame" x="66" y="122" width="518" height="91"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Put your phone back in your pocket." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pai-k0-i24">
+                                <rect key="frame" x="66" y="319" width="518" height="97"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="4." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dho-aN-H1d">
+                                <rect key="frame" x="16" y="423" width="42" height="157"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="52"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFN-Au-srw">
+                                <rect key="frame" x="16" y="122" width="42" height="91"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="52"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydv-o4-uNf">
+                                <rect key="frame" x="16" y="216" width="42" height="95"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="52"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="3." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqo-5o-8s0">
+                                <rect key="frame" x="16" y="319" width="42" height="97"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="52"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJE-ow-bz8">
+                                <rect key="frame" x="66" y="423" width="518" height="157"/>
+                                <string key="text">Your phone will buzz while you're walking. One buzz means you're headed in the right direction. Several buzzes means you're not.</string>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VVN-Mf-xHK" secondAttribute="trailing" constant="16" id="1td-N2-Z8n"/>
+                            <constraint firstAttribute="trailing" secondItem="oJE-ow-bz8" secondAttribute="trailing" constant="16" id="99B-lm-boh"/>
+                            <constraint firstAttribute="trailing" secondItem="5TO-er-9x6" secondAttribute="trailing" constant="16" id="9SU-L2-wvq"/>
+                            <constraint firstItem="zab-Ij-eNt" firstAttribute="leading" secondItem="wgr-df-XJD" secondAttribute="leading" constant="66" id="AHQ-tB-Zld"/>
+                            <constraint firstItem="FFN-Au-srw" firstAttribute="leading" secondItem="wgr-df-XJD" secondAttribute="leading" constant="16" id="IwL-y1-P6k"/>
+                            <constraint firstItem="oJE-ow-bz8" firstAttribute="leading" secondItem="wgr-df-XJD" secondAttribute="leading" constant="66" id="JN7-sU-kE8"/>
+                            <constraint firstAttribute="trailing" secondItem="Pai-k0-i24" secondAttribute="trailing" constant="16" id="NOw-QG-iDd"/>
+                            <constraint firstItem="VVN-Mf-xHK" firstAttribute="leading" secondItem="wgr-df-XJD" secondAttribute="leading" constant="66" id="Tcg-tb-eta"/>
+                            <constraint firstItem="oJE-ow-bz8" firstAttribute="leading" secondItem="dho-aN-H1d" secondAttribute="trailing" constant="8" id="V2i-JI-Ota"/>
+                            <constraint firstItem="Pai-k0-i24" firstAttribute="leading" secondItem="wgr-df-XJD" secondAttribute="leading" constant="66" id="WNz-51-8xI"/>
+                            <constraint firstItem="5TO-er-9x6" firstAttribute="top" secondItem="wgr-df-XJD" secondAttribute="top" constant="20" id="YHR-ID-aVr"/>
+                            <constraint firstItem="zab-Ij-eNt" firstAttribute="leading" secondItem="FFN-Au-srw" secondAttribute="trailing" constant="8" id="cDj-47-R9f"/>
+                            <constraint firstItem="VVN-Mf-xHK" firstAttribute="leading" secondItem="ydv-o4-uNf" secondAttribute="trailing" constant="8" id="dBX-LB-eYc"/>
+                            <constraint firstAttribute="trailing" secondItem="zab-Ij-eNt" secondAttribute="trailing" constant="16" id="e1M-xR-yID"/>
+                            <constraint firstItem="5TO-er-9x6" firstAttribute="leading" secondItem="wgr-df-XJD" secondAttribute="leading" constant="16" id="heL-KU-eSJ"/>
+                            <constraint firstItem="Pai-k0-i24" firstAttribute="leading" secondItem="zqo-5o-8s0" secondAttribute="trailing" constant="8" id="kPF-ev-N5e"/>
+                            <constraint firstItem="ydv-o4-uNf" firstAttribute="leading" secondItem="wgr-df-XJD" secondAttribute="leading" constant="16" id="oQC-zM-oRR"/>
+                            <constraint firstItem="zqo-5o-8s0" firstAttribute="leading" secondItem="wgr-df-XJD" secondAttribute="leading" constant="16" id="yjD-ql-Tcp"/>
+                            <constraint firstItem="dho-aN-H1d" firstAttribute="leading" secondItem="wgr-df-XJD" secondAttribute="leading" constant="16" id="zJh-Mx-bh8"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgB-D4-sFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2035" y="319"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="O0t-pu-QKq">
             <objects>
