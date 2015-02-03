@@ -72,7 +72,7 @@ class LocationService : NSObject, CLLocationManagerDelegate {
                         // Last significant location changes once the walker covers
                         // a distance 
                         if currentLocation!.distanceFromLocation(destination) >
-                            currentLocation!.distanceFromLocation(last) {
+                            last.distanceFromLocation(destination) {
                                 // Buzz crazy
                                 AlertService.sharedInstance.wrongWayAlert()
                         }

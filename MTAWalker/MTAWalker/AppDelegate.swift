@@ -17,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        var splashImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        splashImage.animationImages = [UIImage(named: "walking-man-black-gif-1.png")!,
+            UIImage(named: "walking-man-black-gif-2.png")!]
+        splashImage.animationRepeatCount = 0
+        splashImage.startAnimating()
+        self.window!.addSubview(splashImage)
+        self.window!.bringSubviewToFront(splashImage)
+        
+        //2. set an anchor point on the image view so it opens from the left
+//        splashImage.layer.anchorPoint = CGPointMake(0, 0.5);
+        
         // Start the location service
         LocationService.sharedInstance.startService()
         return true

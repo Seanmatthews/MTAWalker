@@ -63,6 +63,10 @@
 		14D5755F1A80391500EE4774 /* map-thumb-grayscale.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D5755D1A80391500EE4774 /* map-thumb-grayscale.png */; };
 		14D575621A803ACB00EE4774 /* target-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575601A803ACB00EE4774 /* target-black.png */; };
 		14D575631A803ACB00EE4774 /* target-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575611A803ACB00EE4774 /* target-gray.png */; };
+		14D575651A805A7200EE4774 /* MTA_NYC_logo-black-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575641A805A7200EE4774 /* MTA_NYC_logo-black-small.png */; };
+		14D5756A1A805E8F00EE4774 /* walking-man-black-gif-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575681A805E8F00EE4774 /* walking-man-black-gif-1.png */; };
+		14D5756B1A805E8F00EE4774 /* walking-man-black-gif-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 14D575691A805E8F00EE4774 /* walking-man-black-gif-2.png */; };
+		14D575711A80624E00EE4774 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D575701A80624E00EE4774 /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +141,10 @@
 		14D5755D1A80391500EE4774 /* map-thumb-grayscale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map-thumb-grayscale.png"; path = "../../resources/map-thumb-grayscale.png"; sourceTree = "<group>"; };
 		14D575601A803ACB00EE4774 /* target-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "target-black.png"; path = "../../resources/target-black.png"; sourceTree = "<group>"; };
 		14D575611A803ACB00EE4774 /* target-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "target-gray.png"; path = "../../resources/target-gray.png"; sourceTree = "<group>"; };
+		14D575641A805A7200EE4774 /* MTA_NYC_logo-black-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MTA_NYC_logo-black-small.png"; path = "../../resources/MTA_NYC_logo-black-small.png"; sourceTree = "<group>"; };
+		14D575681A805E8F00EE4774 /* walking-man-black-gif-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walking-man-black-gif-1.png"; path = "../../resources/walking-man-black-gif-1.png"; sourceTree = "<group>"; };
+		14D575691A805E8F00EE4774 /* walking-man-black-gif-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walking-man-black-gif-2.png"; path = "../../resources/walking-man-black-gif-2.png"; sourceTree = "<group>"; };
+		14D575701A80624E00EE4774 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +207,9 @@
 		14B2B2A51A7C258500D73912 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14D575681A805E8F00EE4774 /* walking-man-black-gif-1.png */,
+				14D575691A805E8F00EE4774 /* walking-man-black-gif-2.png */,
+				14D575641A805A7200EE4774 /* MTA_NYC_logo-black-small.png */,
 				14D575601A803ACB00EE4774 /* target-black.png */,
 				14D575611A803ACB00EE4774 /* target-gray.png */,
 				14D5755C1A80391500EE4774 /* map-thumb-color.png */,
@@ -262,6 +273,7 @@
 				14B2B2E01A7CABE700D73912 /* RouteListViewController.swift */,
 				14B2B2D71A7C85D700D73912 /* PDFMapViewController.swift */,
 				14B2B2F81A7D731E00D73912 /* DirectionsMapViewController.swift */,
+				14D575701A80624E00EE4774 /* LaunchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -408,7 +420,9 @@
 				14B2B3351A7DA86E00D73912 /* bg.png in Resources */,
 				14B2B2AD1A7C258500D73912 /* Main.storyboard in Resources */,
 				14B2B3251A7D98FF00D73912 /* c.png in Resources */,
+				14D5756B1A805E8F00EE4774 /* walking-man-black-gif-2.png in Resources */,
 				14B2B3211A7D98FF00D73912 /* 7.png in Resources */,
+				14D5756A1A805E8F00EE4774 /* walking-man-black-gif-1.png in Resources */,
 				14D575631A803ACB00EE4774 /* target-gray.png in Resources */,
 				14B2B32A1A7D98FF00D73912 /* j.png in Resources */,
 				14B2B3271A7D98FF00D73912 /* e.png in Resources */,
@@ -418,6 +432,7 @@
 				14B2B31B1A7D98FF00D73912 /* 2.png in Resources */,
 				14B2B32C1A7D98FF00D73912 /* m.png in Resources */,
 				14B2B31C1A7D98FF00D73912 /* 3.png in Resources */,
+				14D575651A805A7200EE4774 /* MTA_NYC_logo-black-small.png in Resources */,
 				14B2B2F71A7D71C000D73912 /* subwaymap.pdf in Resources */,
 				14B2B3331A7D9ECB00D73912 /* walking-man-black.png in Resources */,
 				14B2B32D1A7D98FF00D73912 /* n.png in Resources */,
@@ -458,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D575711A80624E00EE4774 /* LaunchViewController.swift in Sources */,
 				14B2B2D21A7C466D00D73912 /* SwiftCoordinate.swift in Sources */,
 				14B2B2AA1A7C258500D73912 /* ViewController.swift in Sources */,
 				14B2B2EC1A7CBDA400D73912 /* LocationService.swift in Sources */,
