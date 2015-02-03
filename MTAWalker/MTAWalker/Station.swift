@@ -13,6 +13,7 @@ import CoreLocation
 // view, and then again to the route map view.
 class Station : NSObject, Comparable {
     
+    var name: String!
     var coordinate: CLLocation!
     var routesHere = [String]()
     

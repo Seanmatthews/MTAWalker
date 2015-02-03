@@ -68,8 +68,10 @@ class RouteListViewController : UIViewController, UITableViewDataSource, UITable
             let miles = station.milesFromStation()
             (cell.viewWithTag(20) as UILabel).textAlignment = .Right
             (cell.viewWithTag(30) as UILabel).textAlignment = .Right
+            (cell.viewWithTag(40) as UILabel).textAlignment = .Right
             (cell.viewWithTag(20) as UILabel).text = NSString(format: "%.02f miles", miles)
             (cell.viewWithTag(30) as UILabel).text = milesInCityBlocks(miles)
+            (cell.viewWithTag(40) as UILabel).text = station.name
             
             return cell
     }
@@ -110,10 +112,10 @@ class RouteListViewController : UIViewController, UITableViewDataSource, UITable
             str = str + "\nEasy peasy."
         }
         else if distance < 1.01 {
-            str = str + "\nA healthy afternoon walk."
+            str = str + "\nA healthy afternoon walk...."
         }
         else {
-            str = str + "\nMaybe there's a closer station?"
+            str = str + "\nMaybe there's a closer one?"
         }
         
         return str

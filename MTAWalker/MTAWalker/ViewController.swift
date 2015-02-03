@@ -181,6 +181,7 @@ class ViewController: UIViewController {
             }
 
             s.coordinate = coord
+            s.name = items[2]
 
             for i in items[5...15] { // the next 11 items are routes
                 if i == "" {
